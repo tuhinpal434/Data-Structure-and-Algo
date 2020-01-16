@@ -42,6 +42,34 @@ public class BinarySearchTree {
             inOrderRec(root.right);
         }
     }
+    
+  //PreOrder Traversal Method
+
+    void preOrder(){
+        preOrderRec(root);
+    }
+    void preOrderRec(Node root){
+        if(root!=null){
+            
+            System.out.println(root.key);
+            preOrderRec(root.left);
+            preOrderRec(root.right);
+        }
+    }
+    
+  //PostOrder Traversal Method
+
+    void postOrder(){
+        postOrderRec(root);
+    }
+    void postOrderRec(Node root){
+        if(root!=null){
+            postOrderRec(root.left);
+            postOrderRec(root.right);
+            System.out.println(root.key);
+            
+        }
+    }
 //Delete
     void deletenode(int key){
         root=deleteRec(root,key);
